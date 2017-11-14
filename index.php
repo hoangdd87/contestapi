@@ -22,7 +22,7 @@ if ( ! isset( $_SESSION['user'] ) ) { //User chua dang nhap
 			echo "The file " . basename( $_FILES['uploaded_file']['name'] ) .
 			     " has been uploaded";
 			if($pdohelper->get_bainop($user['id'],$_POST['sttbai'])){
-
+			    
 
             }
 			$pdohelper->insert_bai_nop($user['id'],$_POST['sttbai'], $path);
@@ -32,6 +32,7 @@ if ( ! isset( $_SESSION['user'] ) ) { //User chua dang nhap
 		}
 	}
 	?>
+    <a href="uploads/SBD1_BAI1.xlsx">Download</a>
     <h1>Xin chào bạn: <?php echo $user['fullname'] ?>. SBD: <?php echo $user['id']; ?></h1>
 
     <h2>Bài nộp của bạn:</h2>
